@@ -1,0 +1,13 @@
+<app-header (menuSelection)="onMenuSelected($event)" />
+
+@if (selectedContent()) {
+  @if (isLoading()) {
+    <p role="status">Chargement…</p>
+  } @else if (errorMessage(); as message) {
+    <p role="alert">{{ message }}</p>
+  } @else if (items(); as currentItems) {
+    <app-liste [items]="currentItems" />
+  } @else {
+    <p role="status">Cette rubrique n’est pas encore disponible.</p>
+  }
+}

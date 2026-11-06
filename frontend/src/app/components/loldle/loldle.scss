@@ -1,0 +1,6 @@
+
+.guess-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.guess-table th, .guess-table td { padding: 8px; border: 1px solid #e0e0e0; text-align: left; vertical-align: top; word-wrap: break-word; }
+.guess-table td.correct { color: #0a7a07; background:#e9f7ea; font-weight:600; }
+.guess-table td.partial { color: #e67e22; background:#fff6e6; font-weight:600; }
+.guess-table td.wrong { color: #c0392b; background:#fdecec; font-weight:600; }

@@ -1,0 +1,30 @@
+<title>Loldle</title>
+<body>
+    <div class="row">
+        <div class="col-8 mx-auto text-center">
+            <h2>Loldle</h2>
+
+            <form method="post" class="mb-3" id="searchForm">
+                <input type="text" name="guess" id="search" placeholder="Rechercher ou proposer un champion" autocomplete="off" required style="width:70%;">
+                <button type="submit">Proposer</button>
+            </form>
+            <form method="post" class="mb-3">
+                <button type="submit" name="reset" value="1">Réinitialiser</button>
+            </form>
+
+            <!-- Affichage conditionnel d'un message d'information transmis par le serveur. -->
+            <!-- Vérification de la victoire en session, récupération du champion cible et affichage de son nom. -->
+            <div class="mb-4">
+                <label for="search">Liste des champions (cliquez pour remplir la barre ci-dessus)</label><br>
+                <select id="listbox" size="6" style="width:100%;">
+                    <!-- Parcours des champions récupérés et ajout de leur nom comme option de sélection. -->
+                </select>
+            </div>
+
+            <h3>Vos propositions</h3>
+            <!-- Affichage d'un message si aucune proposition n'a été faite ; sinon, récupération du champion cible et inversion de l'ordre des essais pour montrer le plus récent en premier. -->
+            <!-- Pour chaque proposition, comparaison du nom, des espèces, des rôles, du genre, de l'année, de la ressource, de la portée et des régions avec le champion cible. -->
+            <!-- Attribution d'un état correct, partiel ou incorrect à chaque caractéristique, puis affichage des résultats dans un tableau avec l'image du champion. -->
+        </div>
+    </div>
+</body>

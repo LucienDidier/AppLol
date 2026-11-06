@@ -1,0 +1,14 @@
+<header class="site-header">
+	<app-menu (selection)="onMenuSelection($event)"/>
+
+	<div class="header-brand">
+		<h1>AppLol</h1>
+	</div>
+
+	<div class="header-navigation-slot"></div>
+	<div class="header-menu-slot"></div>
+
+	<div class="header-search-slot">
+		<app-search-bar [(search)]="search"/>
+	</div>
+</header>

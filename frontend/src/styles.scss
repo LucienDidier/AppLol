@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+	color-scheme: dark;
+	font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+	color: #f3f0e8;
+	background: #080f18;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+
+	--color-ink: #080f18;
+	--color-panel: #111d29;
+	--color-panel-light: #172635;
+	--color-gold: #c8aa6e;
+	--color-gold-light: #f0e6d2;
+	--color-blue: #0ac8b9;
+	--color-muted: #9aa8b5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-width: 320px;
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	background:
+		radial-gradient(ellipse at 50% 0, rgb(29 55 73 / 48%), transparent 58%),
+		var(--color-ink);
+}
+
+button,
+input {
+	font: inherit;
+}
+
+::selection {
+	color: var(--color-ink);
+	background: var(--color-gold);
+}

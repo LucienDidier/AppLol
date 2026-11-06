@@ -1,0 +1,56 @@
+:host {
+	display: block;
+}
+
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	min-height: 5.5rem;
+	padding: 1rem clamp(1rem, 4vw, 3rem);
+	background: linear-gradient(145deg, rgb(23 38 53 / 96%), rgb(13 24 35 / 98%));
+	border-bottom: 1px solid rgb(200 170 110 / 35%);
+	box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 24%);
+}
+
+.header-brand {
+	flex: 0 0 auto;
+}
+
+.header-brand h1 {
+	margin: 0;
+	color: var(--color-gold-light);
+	font-family: 'Oxanium', 'Segoe UI', sans-serif;
+	font-size: clamp(1.25rem, 3vw, 1.8rem);
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+
+.header-navigation-slot,
+.header-menu-slot {
+	flex: 1 1 auto;
+	min-width: 1rem;
+}
+
+.header-search-slot {
+	flex: 0 1 28rem;
+	min-width: min(100%, 16rem);
+}
+
+@media (max-width: 640px) {
+	.site-header {
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.header-navigation-slot,
+	.header-menu-slot {
+		display: none;
+	}
+
+	.header-search-slot {
+		flex: 1 1 100%;
+		min-width: 0;
+	}
+}

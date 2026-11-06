@@ -1,0 +1,11 @@
+<div class="search-box">
+	<input
+		id="live-search"
+		type="search"
+		placeholder="Rechercher..."
+		autocomplete="off"
+		aria-label="Rechercher un champion"
+		[(ngModel)]="search"
+	/>
+	<button type="button" (click)="searchClick()">Rechercher</button>
+</div>

@@ -1,0 +1,75 @@
+.menu-dropdown {
+	position: relative;
+}
+
+.menu-dropdown summary {
+	display: grid;
+	width: 2.75rem;
+	height: 2.75rem;
+	place-items: center;
+	color: var(--color-gold-light);
+	background: rgb(5 12 19 / 55%);
+	border: 1px solid #344655;
+	border-radius: 0.35rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
+	list-style: none;
+	transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+}
+
+.menu-dropdown summary::-webkit-details-marker {
+	display: none;
+}
+
+.menu-dropdown summary:hover,
+.menu-dropdown[open] summary {
+	color: var(--color-gold);
+	background: var(--color-panel-light);
+	border-color: var(--color-gold);
+}
+
+.menu-dropdown summary:focus-visible {
+	outline: 3px solid var(--color-blue);
+	outline-offset: 3px;
+}
+
+.menu-options {
+	position: absolute;
+	z-index: 10;
+	top: calc(100% + 0.65rem);
+	left: 0;
+	min-width: 12rem;
+	margin: 0;
+	padding: 0.4rem;
+	background: linear-gradient(145deg, rgb(23 38 53 / 98%), rgb(13 24 35 / 99%));
+	border: 1px solid rgb(200 170 110 / 45%);
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 40%);
+	list-style: none;
+}
+
+.menu-options button {
+	width: 100%;
+	padding: 0.7rem 0.8rem;
+	color: var(--color-gold-light);
+	background: transparent;
+	border: 0;
+	border-radius: 0.3rem;
+	text-align: left;
+	cursor: pointer;
+}
+
+.menu-options button:hover,
+.menu-options button:focus-visible {
+	color: var(--color-blue);
+	background: rgb(10 200 185 / 8%);
+	outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.menu-dropdown summary {
+		transition: none;
+	}
+}

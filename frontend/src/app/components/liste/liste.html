@@ -1,0 +1,35 @@
+<section class="list-panel" aria-labelledby="list-title">
+  <h2 id="list-title">Liste</h2>
+
+  @if (items().length === 0) {
+    <p>Aucun élément à afficher.</p>
+  } @else {
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Informations</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of items(); track item.id) {
+          <tr>
+            <td>{{ item.type }}</td>
+            <th scope="row">{{ item.title }}</th>
+            <td>
+              <dl>
+                @for (field of item.fields; track field.label) {
+                  <div>
+                    <dt>{{ field.label }}</dt>
+                    <dd>{{ field.value }}</dd>
+                  </div>
+                }
+              </dl>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</section>
